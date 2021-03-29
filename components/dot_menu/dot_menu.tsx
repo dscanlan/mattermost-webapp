@@ -120,6 +120,7 @@ class DotMenu extends React.PureComponent<Props, State> {
         isReadOnly: false,
         location: Locations.CENTER,
         pluginMenuItems: [],
+        appBindings: [],
     }
     private editDisableAction: DelayedAction;
     private buttonRef: React.RefObject<HTMLButtonElement>;

@@ -65,7 +65,7 @@ function mapStateToProps(state: GlobalState, ownProps: Props) {
 
     const apps = appsEnabled(state);
     const showBindings = apps && !isSystemMessage(post) && !isCombinedUserActivityPost(post.id);
-    const appBindings = showBindings ? getAppBindings(state, AppBindingLocations.POST_MENU_ITEM) : [];
+    const appBindings = showBindings ? getAppBindings(state, AppBindingLocations.POST_MENU_ITEM) : undefined;
 
     return {
         channelIsArchived: isArchivedChannel(channel),
