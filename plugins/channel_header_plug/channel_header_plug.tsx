@@ -113,6 +113,11 @@ type ChannelHeaderPlugState = {
 }
 
 class ChannelHeaderPlug extends React.PureComponent<ChannelHeaderPlugProps, ChannelHeaderPlugState> {
+    public static defaultProps: Partial<ChannelHeaderPlugProps> = {
+        components: [],
+        appBindings: [],
+    }
+
     constructor(props: ChannelHeaderPlugProps) {
         super(props);
         this.state = {

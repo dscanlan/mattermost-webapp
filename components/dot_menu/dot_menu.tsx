@@ -113,12 +113,13 @@ type State = {
 }
 
 class DotMenu extends React.PureComponent<Props, State> {
-    static defaultProps = {
+    public static defaultProps: Partial<Props> = {
         commentCount: 0,
         isFlagged: false,
         isReadOnly: false,
         location: Locations.CENTER,
         pluginMenuItems: [],
+        appBindings: [],
     }
     private editDisableAction: DelayedAction;
     private buttonRef: React.RefObject<HTMLButtonElement>;
