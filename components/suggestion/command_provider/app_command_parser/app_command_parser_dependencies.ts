@@ -94,13 +94,11 @@ export const intlShim = {
     },
 };
 
-export const errorMessage = (intl: typeof intlShim, error: string, command: string, position: number): string => {
+export const errorMessage = (intl: typeof intlShim, error: string, _command: string, _position: number): string => { // eslint-disable-line @typescript-eslint/no-unused-vars
     return intl.formatMessage({
         id: 'apps.error.parser',
-        defaultMessage: 'Parsing error: {error}.\n```\n{command}\n{space}^\n```',
+        defaultMessage: 'Parsing error: {error}',
     }, {
         error: error,
-        command: command,
-        space: ' '.repeat(position),
     });
 };
