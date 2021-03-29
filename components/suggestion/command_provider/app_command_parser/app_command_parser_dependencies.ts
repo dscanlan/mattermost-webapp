@@ -99,6 +99,6 @@ export const errorMessage = (intl: typeof intlShim, error: string, _command: str
         id: 'apps.error.parser',
         defaultMessage: 'Parsing error: {error}',
     }, {
-        error: error,
+        error,
     });
 };

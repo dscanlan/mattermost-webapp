@@ -543,7 +543,7 @@ export class AppCommandParser {
     }
 
     // composeCallFromCommand creates the form submission call
-    public composeCallFromCommand = async (command: string): Promise<{call: AppCallRequest | null, errorMessage?: string}> => {
+    public composeCallFromCommand = async (command: string): Promise<{call: AppCallRequest | null; errorMessage?: string}> => {
         let parsed = new ParsedCommand(command, this, this.intl);
 
         const commandBindings = this.getCommandBindings();
@@ -680,7 +680,7 @@ export class AppCommandParser {
     }
 
     // composeCallFromParsed creates the form submission call
-    composeCallFromParsed = async (parsed: ParsedCommand): Promise<{call: AppCallRequest | null, errorMessage?: string}> => {
+    composeCallFromParsed = async (parsed: ParsedCommand): Promise<{call: AppCallRequest | null; errorMessage?: string}> => {
         if (!parsed.binding) {
             return {call: null,
                 errorMessage: this.intl.formatMessage({

@@ -45,7 +45,7 @@ describe('AppCommandParser', () => {
     };
 
     const intl = {
-        formatMessage: (message: {id: string, defaultMessage: string}) => {
+        formatMessage: (message: {id: string; defaultMessage: string}) => {
             return message.defaultMessage;
         },
     };
